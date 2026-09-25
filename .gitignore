@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+
+*.log
+npm-debug.log*
+
+.vscode/
+.idea/
+*.swp
+*~
+
+node_modules/
+.env
+.env.*
+
+# fonts/ is intentionally tracked — the webfonts are self-hosted on purpose
