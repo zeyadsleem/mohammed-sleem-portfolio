@@ -532,3 +532,26 @@ footer a:last-child:hover{color:var(--rust)}
   *,*:before,*:after{animation:none!important;transition:none!important}
   .type-strip div{animation:none}
 }
+
+/* Studio-style header: wordmark, descriptor and outlined contact link. */
+.nav{height:auto;min-height:var(--nav-h);padding:20px 4%;gap:28px;border-bottom:1px solid var(--ink)}
+.nav .wordmark{flex-shrink:0;letter-spacing:-3px}
+.nav-caption{margin-inline-start:2vw;margin-inline-end:auto;max-width:190px;line-height:1.5}
+.nav nav{flex-shrink:0;gap:28px;direction:rtl}
+.nav nav>a{white-space:nowrap;font-size:14px}
+.nav .nav-contact{border:1px solid var(--ink);border-radius:100px;padding:11px 18px;transition:background .2s,color .2s}
+.nav .nav-contact:hover{background:var(--ink);color:var(--paper)}
+@media(max-width:800px){
+ .nav{padding:18px 5%;gap:20px}
+ .nav-caption{display:none}
+ .nav nav{gap:20px}
+}
+@media(max-width:550px){
+ :root{--nav-h:134px}
+ .nav{flex-wrap:wrap;gap:15px;padding:18px 5%}
+ .nav .wordmark{font-size:35px}
+ .nav-caption{display:block;margin:0 0 0 auto;max-width:150px;font-size:11px;text-align:right}
+ .nav nav{width:100%;justify-content:space-between;gap:10px}
+ .nav nav>a{font-size:12px}
+ .nav .nav-contact{padding:9px 13px}
+}
