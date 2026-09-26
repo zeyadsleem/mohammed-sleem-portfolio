@@ -140,7 +140,7 @@ a:focus-visible{outline:3px solid var(--ink);outline-offset:6px}
   gap:7%;
   padding:50px 0 25px;
 }
-.hero-copy{animation:arrive .8s both}
+.hero-copy{min-width:0;animation:arrive .8s both}
 .hero-copy .eyebrow{
   color:var(--on-dark-2);
   font-family:var(--sans);
@@ -438,8 +438,12 @@ footer a:last-child:hover{color:var(--rust)}
   .hero{padding:24px 6%}
   .hero-top{padding-bottom:24px;font-size:11px}
   .hero-top span:last-child{max-width:140px}
-  .hero h1{font-size:7vw}
-  .name-band{font-size:25vw;margin-top:45px}
+  .portrait-hero{grid-template-columns:1fr;gap:32px;padding-top:32px}
+  .hero h1{font-size:clamp(28px,8.5vw,56px);line-height:1.5}
+  .hero-copy>p{max-width:38ch;line-height:2;text-wrap:pretty}
+  .hero-copy>p br{display:none}
+  .portrait-frame{width:85%;max-width:440px;margin:0 auto}
+  .name-band{font-size:8vw;margin-top:32px;gap:10px}
   .hero-bottom{font-size:11px}
   .section-pad{padding:70px 6%}
   .project-grid{gap:40px 22px}
@@ -459,16 +463,12 @@ footer a:last-child:hover{color:var(--rust)}
   :root{--nav-h:76px}
   .nav .wordmark{font-size:32px}
   .nav nav{gap:clamp(10px,2.8vw,16px);font-size:12px}
-  .portrait-hero{grid-template-columns:1fr;gap:38px;padding-top:35px}
-  .hero h1{font-size:9vw}
   .hero-copy>p{margin:20px 0 26px;font-size:15px}
   .hero-copy .eyebrow{margin-bottom:12px;font-size:12px}
   .hero-specialties{margin-top:28px;font-size:11px}
-  .portrait-frame{width:85%;max-width:440px;margin:0 auto}
   .portrait-frame>img{aspect-ratio:4/4.6}
   .portrait-frame figcaption{padding:55px 20px 18px}
-  .name-band{margin-top:35px;font-size:7.6vw;gap:10px}
-    .hero-bottom>span:last-child{max-width:120px}
+  .hero-bottom>span:last-child{max-width:120px}
   .hero-top,.hero-bottom{font-size:11px}
   .resume-grid{grid-template-columns:1fr;gap:22px}
   .resume-card:first-child{grid-column:auto}
@@ -494,8 +494,10 @@ footer a:last-child:hover{color:var(--rust)}
   :root{--nav-h:74px}
   .wordmark{font-size:35px}
   .hero-top [dir]{max-width:170px;letter-spacing:.5px}
-  .hero h1{font-size:11.1vw;line-height:1.5}
-  .name-band{margin:40px 0 22px;font-size:24.5vw}
+  .hero-actions{gap:16px 20px}
+  .hero-actions a{white-space:nowrap}
+  .hero-specialties{line-height:1.8;text-wrap:balance}
+  .name-band{margin:28px 0 22px}
   .hero-bottom{gap:15px}
   .hero-bottom>span:last-child{max-width:130px;text-align:left}
   .section-head{display:block;margin-bottom:30px}
